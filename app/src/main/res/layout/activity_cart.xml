@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/txtTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:textSize="18sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="8dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="8dp">
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnBackToCatalog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Seguir Comprando"
+            style="?attr/materialButtonOutlinedStyle" /> <!-- Estilo opcional para diferenciarlo -->
+        <!-- O simplemente android:text="Volver" -->
+
+        <Space
+            android:layout_width="8dp"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Vaciar carrito" />
+        <!-- Podrías darle un color diferente para acciones destructivas si usas Material Components -->
+        <!-- app:backgroundTint="@color/rojo_peligro" -->
+
+    </LinearLayout>
+
+    <!-- Opcional: Un botón de "Proceder al Pago" si fuera el siguiente paso -->
+
+    <Button
+        android:id="@+id/btnCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proceder al Pago"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="?attr/colorPrimary" />
+
+
+
+</LinearLayout>

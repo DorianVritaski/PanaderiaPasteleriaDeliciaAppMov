@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Ítem de Perfil/Login -->
+    <item
+        android:id="@+id/action_profile"
+        android:icon="@drawable/ic_person"
+        android:title="Mi Perfil"
+        app:showAsAction="ifRoom" />
+
+    <!-- Ítem para ver el carrito -->
+    <item
+        android:id="@+id/action_view_cart"
+        android:icon="@drawable/ic_shopping_cart"
+        android:title="Ver Carrito"
+        app:showAsAction="ifRoom" />
+
+    <!-- ======================= INICIO DEL ÍTEM A AÑADIR ======================= -->
+    <!-- Ítem para que el Admin agregue productos -->
+    <item
+        android:id="@+id/action_add_product"
+        android:icon="@drawable/ic_add"
+        android:title="Agregar Producto"
+        app:showAsAction="ifRoom" />
+    <!-- ======================== FIN DEL ÍTEM A AÑADIR ========================= -->
+
+</menu>

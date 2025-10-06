@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileActivity">
+
+    <!-- Toolbar añadida aquí -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarProfile"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <!-- Contenido original, ahora con padding superior si la Toolbar es translúcida -->
+    <!-- o anclado debajo de la Toolbar. Aquí lo anclaremos debajo. -->
+    <ImageView
+        android:id="@+id/ivProfileUserAvatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        app:srcCompat="@drawable/user_image"
+        app:layout_constraintTop_toBottomOf="@id/toolbarProfile"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:contentDescription="Avatar del usuario" />
+
+    <TextView
+        android:id="@+id/tvProfileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Mi Perfil"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintTop_toBottomOf="@id/ivProfileUserAvatar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvProfileLabelFullName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:text="Nombre Completo:"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        app:layout_constraintTop_toBottomOf="@id/tvProfileTitle"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvProfileFullName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        tools:text="John Doe Ejemplo"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@id/tvProfileLabelFullName"
+        app:layout_constraintBottom_toBottomOf="@id/tvProfileLabelFullName"
+        app:layout_constraintStart_toEndOf="@id/tvProfileLabelFullName"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvProfileLabelEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:text="Correo Electrónico:"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+        app:layout_constraintTop_toBottomOf="@id/tvProfileLabelFullName"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvProfileEmail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        tools:text="john.doe@example.com"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="@id/tvProfileLabelEmail"
+        app:layout_constraintBottom_toBottomOf="@id/tvProfileLabelEmail"
+        app:layout_constraintStart_toEndOf="@id/tvProfileLabelEmail"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btnProfileLogout"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Cerrar Sesión"
+        android:textColor="?attr/colorError"
+        app:layout_constraintTop_toBottomOf="@id/tvProfileEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

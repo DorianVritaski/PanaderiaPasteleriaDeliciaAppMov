@@ -1,0 +1,30 @@
+<resources>
+    <!-- Tema base de tu app (puede o no tener ActionBar por defecto, dependiendo de tus necesidades) -->
+    <style name="Theme.AppDelicia01" parent="Theme.Material3.DayNight">
+        <!-- Colores/atributos para actividades que USAN la ActionBar por defecto del tema -->
+        <!-- Ejemplo:
+        <item name="colorPrimary">@color/md_theme_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
+        ...
+        -->
+    </style>
+
+    <!-- Variante NoActionBar para actividades con Toolbar personalizada -->
+    <style name="Theme.AppDelicia01.NoActionBar" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Aquí puedes poner los mismos colores/atributos que tu tema base
+             Theme.AppDelicia01 si quieres que la Toolbar personalizada
+             se vea similar, o puedes definir unos diferentes.
+             Estos colores (colorPrimary, etc.) afectarán el fondo y texto
+             de la Toolbar que añades en tu XML si no los sobrescribes directamente allí.
+
+        -->
+        <!-- Ejemplo:
+        <item name="colorPrimary">@color/md_theme_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_onPrimaryContainer</item>
+        ...
+        -->
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+</resources>
