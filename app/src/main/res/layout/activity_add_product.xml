@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.admin.AddProductActivity">
+    tools:context=".views.AddProductActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbarAddProduct"

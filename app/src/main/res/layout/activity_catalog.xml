@@ -5,20 +5,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.catalog.CatalogActivity">
+    android:background="@color/background_light_gray"
+    tools:context=".views.CatalogActivity">
 
     <!-- AppBarLayout para contener la Toolbar (sin cambios) -->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayoutCatalog"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:layout_height="wrap_content">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbarCatalog"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary" />
+            app:titleTextColor="@color/black" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -27,8 +27,10 @@
         android:id="@+id/rvProducts"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:visibility="gone" /> <!-- Opcional: empezar oculto -->
+        android:clipToPadding="false"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" /> <!-- Opcional: empezar oculto -->
 
     <!-- ======================= INICIO DEL BLOQUE A AÑADIR ======================= -->
     <ProgressBar
@@ -38,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:visibility="gone"
-        tools:visibility="visible"/>
+        tools:visibility="visible" />
     <!-- ======================== FIN DEL BLOQUE A AÑADIR ========================= -->
 
 
@@ -50,7 +52,11 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="16dp"
         android:src="@drawable/ic_shopping_cart"
-        app:tint="@android:color/white"/> <!-- Opcional: para que el icono se vea bien -->
+        app:backgroundTint="@color/gold_primary"
+        app:tint="@color/black" /> <!-- Opcional: para que el icono se vea bien -->
     <!-- android:contentDescription="@string/view_shopping_cart" -->
+
+
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

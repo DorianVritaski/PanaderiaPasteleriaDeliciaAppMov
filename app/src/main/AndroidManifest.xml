@@ -15,9 +15,9 @@
 
         <!-- 1) Pantalla inicial -->
         <activity
-            android:name=".ui.splash.SplashActivity"
+            android:name=".views.SplashActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppDelicia01.NoActionBar">   <!-- opcional: sin ActionBar -->
+            android:theme="@style/Theme.AppDelicia01">   <!-- MODIFICADO: Se quitó .NoActionBar -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -26,29 +26,59 @@
 
         <!-- 2) Catálogo (debe existir activity_catalog.xml) -->
         <activity
-            android:name=".ui.catalog.CatalogActivity"
+            android:name=".views.CatalogActivity"
             android:label="Catálogo"
-            android:theme="@style/Theme.AppDelicia01.NoActionBar" />
+            android:theme="@style/Theme.AppDelicia01" /> <!-- MODIFICADO: Se quitó .NoActionBar -->
 
         <!-- 3) Carrito -->
-        <activity android:name=".ui.cart.CartActivity" />
+        <activity android:name=".views.CartActivity" />
 
         <!-- 4) Login (si lo usarás en el checkout) -->
-        <activity android:name=".ui.auth.LoginActivity" />
+        <activity android:name=".views.LoginActivity" />
 
         <!-- 5) Perfil del usuario -->
-        <activity android:name=".ui.profile.ProfileActivity"
+        <activity android:name=".views.ProfileActivity"
             android:label="Mi Perfil"
             android:exported="false"
-            android:theme="@style/Theme.AppDelicia01.NoActionBar"/>
+            android:theme="@style/Theme.AppDelicia01"/> <!-- MODIFICADO: Se quitó .NoActionBar -->
+
         <!-- 6) Registro de usuario -->
-        <activity android:name=".ui.auth.RegisterActivity" />
+        <activity android:name=".views.RegisterActivity" />
 
         <activity
-            android:name=".ui.admin.AddProductActivity"
+            android:name=".views.AddProductActivity"
             android:exported="false"
-            android:theme="@style/Theme.AppDelicia01.NoActionBar" />
+            android:theme="@style/Theme.AppDelicia01" /> <!-- MODIFICADO: Se quitó .NoActionBar -->
 
+        <activity
+            android:name=".views.DeliveryOptionsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".views.PaymentMethodActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".views.OrderSuccessActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".views.AdminOrdersActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".views.AdminOrderDetailActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".views.MyOrdersActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".views.EditProfileActivity"
+            android:exported="false"
+            android:label="Editar Perfil" />
 
     </application>
 </manifest>

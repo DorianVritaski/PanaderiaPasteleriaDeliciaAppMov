@@ -1,71 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="8dp">
+    android:padding="16dp"
+    android:background="@color/off_white">
 
-    <TextView
-        android:id="@+id/txtTotal"
+    <!-- CARD DEL TOTAL -->
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="12dp"
-        android:textSize="18sp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="8dp"/>
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="12dp">
 
+        <TextView
+            android:id="@+id/txtTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:gravity="center"
+            tools:text="Total: S/ 45.90" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- LISTA DEL CARRITO -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginBottom="8dp">
+        android:layout_weight="1">
 
         <LinearLayout
             android:id="@+id/container"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical"
+            android:divider="@android:drawable/divider_horizontal_dark"
+            android:showDividers="none" />
     </ScrollView>
 
+    <!-- BOTONES DE ACCIONES -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBackToCatalog"
+            style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Seguir Comprando"
-            style="?attr/materialButtonOutlinedStyle" /> <!-- Estilo opcional para diferenciarlo -->
-        <!-- O simplemente android:text="Volver" -->
+            android:text="Seguir Comprando" />
 
         <Space
-            android:layout_width="8dp"
-            android:layout_height="wrap_content"/>
+            android:layout_width="12dp"
+            android:layout_height="wrap_content" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnClear"
+            style="@style/Widget.Material3.Button.TonalButton"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Vaciar carrito" />
-        <!-- Podrías darle un color diferente para acciones destructivas si usas Material Components -->
-        <!-- app:backgroundTint="@color/rojo_peligro" -->
-
+            android:text="Vaciar carrito"
+            android:textColor="@android:color/white"
+            app:backgroundTint="@color/red_600" />
     </LinearLayout>
 
-    <!-- Opcional: Un botón de "Proceder al Pago" si fuera el siguiente paso -->
-
-    <Button
+    <!-- BOTÓN CHECKOUT -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnCheckout"
+        style="@style/Widget.Material3.Button.TonalButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Proceder al Pago"
-        android:layout_marginTop="8dp"
-        android:backgroundTint="?attr/colorPrimary" />
-
-
+        android:layout_marginTop="16dp"
+        android:textSize="16sp" />
 
 </LinearLayout>

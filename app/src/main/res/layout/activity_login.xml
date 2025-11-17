@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:padding="24dp"
-    tools:context=".ui.auth.LoginActivity"> <!-- Asumiendo que crearás LoginActivity.java en ui.auth -->
+    tools:context=".views.LoginActivity"> <!-- Asumiendo que crearás LoginActivity.java en ui.auth -->
 
     <ImageView
         android:layout_width="100dp"

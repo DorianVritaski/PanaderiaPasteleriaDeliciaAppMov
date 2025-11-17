@@ -48,4 +48,5 @@ dependencies {
     annotationProcessor("com.github.bumptech.glide:compiler:4.15.1")
     implementation(platform("com.google.firebase:firebase-bom:34.3.0"))
     implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.android.material:material:1.12.0")
 }
